@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class StatsServiceTest {
 
     @Test
@@ -10,7 +12,7 @@ public class StatsServiceTest {
 
         long actual = service.amount(sales);
         long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -20,7 +22,7 @@ public class StatsServiceTest {
 
         long actual = service.avg(sales);
         long expected = 15;
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -29,8 +31,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.minSales(sales);
-        long expected = 8;
-        Assertions.assertEquals(expected, actual);
+        long expected = 9;
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -39,8 +41,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.maxSales(sales);
-        long expected = 7;
-        Assertions.assertEquals(expected, actual);
+        long expected = 8;
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -49,8 +51,8 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
 
         long actual = service.countHigherAvg(sales);
-        long expected = 7;
-        Assertions.assertEquals(expected, actual);
+        long expected = 5;
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -60,7 +62,7 @@ public class StatsServiceTest {
 
         long actual = service.countAboveAvg(sales);
         long expected = 5;
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }
 
